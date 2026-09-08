@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEONA — Data Analytics Platform & AI Solutions</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #2563eb;
+            --accent: #06b6d4;
+            --bg-light: #f8fafc;
+            --text-dark: #334155;
+            --white: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), #1e293b);
+            color: var(--white);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+        }
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: var(--white);
+            padding: 6rem 5%;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            color: #94a3b8;
+        }
+        .btn {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+        section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        .research-section {
+            background: #e2e8f0;
+            border-radius: 12px;
+            padding: 3.5rem;
+            margin-top: 2rem;
+            border-left: 6px solid var(--secondary);
+        }
+        .research-section h2 {
+            text-align: left;
+        }
+        .contact-box {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 5%;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">FEONA</div>
+        <nav>
+            <a href="#platform">Platform</a>
+            <a href="#solutions">AI Solutions</a>
+            <a href="#research">Research</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact & Partnership</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>FEONA: Advanced Data Analytics & AI Solutions</h1>
+        <p>Bridging enterprise-grade cloud data architecture with behavioral machine learning models rooted in doctoral-level academic research.</p>
+        <a href="#contact" class="btn">Explore Partnership</a>
+    </div>
+
+    <!-- Platform Overview -->
+    <section id="platform">
+        <h2>The FEONA Data Analytics Platform</h2>
+        <p class="section-subtitle">Delivering robust data analytics, data warehousing, and knowledge management consulting for Finnish SMEs, fintech operators, and the public sector.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Cloud Data Warehouses</h3>
+                <p>Architecting, executing, and maintaining modern, scalable data foundations built on <strong>Snowflake</strong> and <strong>Microsoft Azure</strong> to replace siloed legacy spreadsheets.</p>
+            </div>
+            <div class="card">
+                <h3>ETL & ELT Pipelines</h3>
+                <p>Robust data ingestion pipelines and automated processing frameworks ensuring seamless data flows across complex organizational environments.</p>
+            </div>
+            <div class="card">
+                <h3>Power BI & Semantic Models</h3>
+                <p>Advanced reporting, DAX logic, and dynamic executive dashboards providing real-time visibility into mission-critical business KPIs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Solutions -->
+    <section id="solutions">
+        <h2>Cutting-Edge AI Solutions</h2>
+        <p class="section-subtitle">Translating rigorous academic research into production-ready software solutions for intelligent enterprise automation and behavioral mapping.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Fintech & Regulatory Analytics</h3>
+                <p>Automated financial reporting, precise reconciliations, and regulatory compliance workflows (AML, IFRS) combining deep accounting insight with modern cloud tech.</p>
+            </div>
+            <div class="card">
+                <h3>Behavioral Machine Learning</h3>
+                <p>Advanced feature extraction and modeling ($X = \{\text{Logic, Spatial, Resilience, Efficiency, Collaboration}\}$) translating observational telemetry into structured insights.</p>
+            </div>
+            <div class="card">
+                <h3>Predictive Career Pathways</h3>
+                <p>Supervised multi-label classification and clustering algorithms mapping longitudinal behavioral progression to professional aptitude models.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctoral Research Section -->
+    <section id="research">
+        <div class="research-section">
+            <h2>Grounded in Doctoral Research</h2>
+            <p>FEONA's AI and learning analytics framework originates from pioneering academic research conducted in collaboration with the <strong>University of Helsinki</strong> (Faculty of Educational Sciences).</p>
+            <p><strong>Core Research Foundation:</strong> <em>"Predictive Analytics in Non-Formal STEM Environments: A Behavioral Machine Learning Framework for Longitudinal Career Aptitude Mapping"</em> (Nataliya Rozhnova, Maria Rohnonen, and Anton Poppel).</p>
+            <p>By capturing stealth behavioral metrics—such as iteration rates, resource efficiency, and rule discovery latency during complex problem-solving—FEONA quantifies unmeasured cognitive growth to build objective, data-driven competency profiles.</p>
+        </div>
+    </section>
+
+    <!-- Services & Offerings -->
+    <section id="services">
+        <h2>Core Services & Expertise</h2>
+        <p class="section-subtitle">Flexible engagement models designed for enterprise growth, public sector tenders, and Nordic tech partnerships.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Enterprise Modernization</h3>
+                <p>Migration from legacy systems to cloud-native platforms with fast delivery cycles—first functional reporting model operational within 2–4 weeks.</p>
+            </div>
+            <div class="card">
+                <h3>Executive Dashboards & KPI Logic</h3>
+                <p>Eliminate manual reporting overhead and empower management with standardized financial and operational views.</p>
+            </div>
+            <div class="card">
+                <h3>Independent Architectural Advisory</h3>
+                <p>Independent consulting on platform selection (Snowflake vs. Synapse vs. Databricks) and strategic data roadmap development.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Partnership Section -->
+    <section id="contact">
+        <h2>Contact & Explore Partnership</h2>
+        <p class="section-subtitle">Connect with us to discuss data architecture, analytics consulting, or explore strategic partnerships.</p>
+        
+        <div class="contact-box">
+            <div class="contact-info">
+                <p><strong>Lead Professional:</strong> Maria Rohnonen</p>
+                <p><strong>Email:</strong> <a href="mailto:maria@aurinkolab.fi">maria@aurinkolab.fi</a></p>
+                <p><strong>Phone:</strong> +358 453 123 388</p>
+                <p><strong>Location:</strong> Vähäntorpankuja 4, 02180 Espoo, Finland</p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/feona26" target="_blank">linkedin.com/in/feona26</a></p>
+            </div>
+
+            <form onsubmit="event.preventDefault(); alert('Thank you for your partnership inquiry! We will get back to you shortly.');">
+                <div class="form-group">
+                    <label for="name">Your Name / Organization</label>
+                    <input type="text" id="name" required placeholder="Enter your name or company">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Partnership Interest / Message</label>
+                    <textarea id="message" rows="4" required placeholder="Describe your project, data architecture needs, or collaboration idea..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Submit Partnership Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 FEONA Platform. All rights reserved. Built on doctoral research & advanced data analytics.</p>
+    </footer>
+
+</body>
+</html>
