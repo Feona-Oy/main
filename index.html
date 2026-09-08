@@ -160,11 +160,37 @@
         footer {
             background: var(--primary);
             color: var(--white);
-            text-align: center;
-            padding: 2rem 5%;
+            padding: 3rem 5%;
             margin-top: 4rem;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #94a3b8;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-info p {
+            margin: 0.3rem 0;
+            color: #cbd5e1;
+        }
+        .footer-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -185,7 +211,7 @@
     <!-- Hero Section -->
     <div class="hero">
         <h1>FEONA: Advanced Data Analytics & AI Solutions</h1>
-        <p>Bridging enterprise-grade cloud data architecture with behavioral machine learning models rooted in doctoral-level academic research.</p>
+        <p>Bridging modern cloud data architecture with behavioral machine learning rooted in doctoral research.</p>
         <a href="#contact" class="btn">Explore Partnership</a>
     </div>
 
@@ -235,8 +261,8 @@
     <section id="research">
         <div class="research-section">
             <h2>Grounded in Doctoral Research</h2>
-            <p>FEONA's AI and learning analytics framework originates from pioneering academic research conducted in collaboration with the <strong>University of Helsinki</strong>.</p>
-            <p><strong>Core Research Foundation:</strong> <em>"Predictive analytics in non-formal stem environments: a behavioral machine learning framework for longitudinal career aptitude mapping"</em> (Nataliya Rozhnova, Maria Rohnonen).</p>
+            <p>FEONA's AI and learning analytics framework stems from pioneering academic research at the University of Helsinki (Faculty of Educational Sciences) regarding predictive analytics and behavioral machine learning in non-formal STEM environments (Nataliya Rozhnova, Maria Rohnonen).</p>
+            <p>This framework is backed by Maria Rohnonen's doctoral research (PhD) at LUT University specializing in Digital Twins in Transport.</p>
             <p>By capturing stealth behavioral metrics—such as iteration rates, resource efficiency, and rule discovery latency during complex problem-solving—FEONA quantifies unmeasured cognitive growth to build objective, data-driven competency profiles.</p>
         </div>
     </section>
@@ -268,12 +294,6 @@
         <p class="section-subtitle">Connect with us to discuss data architecture, analytics consulting, or explore strategic partnerships.</p>
         
         <div class="contact-box">
-            <div class="contact-info">
-                <p><strong>Email:</strong> <a href="mailto:maria@aurinkolab.fi">mrohnonen@outlook.com</a></p>
-                <p><strong>Phone:</strong> +358 453 123 388</p>
-                <p><strong>Location:</strong> Kansakoulukatu 3, 00100 Helsinki, Finland</p>
-                
-            </div>
 
             <form id="contact-form" action="https://formspree.io/f/xwleoqdd" method="POST">
                 <div class="form-group">
@@ -294,12 +314,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 FEONA Platform. All rights reserved. Built on doctoral research & advanced data analytics.</p>
-    </footer>
-
-    <!-- Script to handle Formspree AJAX submission and display the success message -->
+    <!-- Script to handle Formspree AJAX submission -->
     <script>
         var form = document.getElementById("contact-form");
         
@@ -334,6 +349,32 @@
         
         form.addEventListener("submit", handleSubmit);
     </script>
+
+    <!-- Footer with Contact Info & LinkedIn -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>FEONA Oy</strong></p>
+                <p>Kansakoulukatu 3, 00100 Helsinki</p>
+                <p>Phone: +358 453 123 388</p>
+                <p>Email: <a href="mailto:maria.rohnonen@feona.fi">maria.rohnonen@feona.fi</a></p>
+            </div>
+            <div class="footer-info">
+                <p><strong>Connect Online</strong></p>
+                <p>
+                    <a href="https://www.linkedin.com/company/feona26" target="_blank" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        https://www.linkedin.com/company/feona26
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FEONA Platform. All rights reserved. Built on doctoral research & advanced data analytics.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
