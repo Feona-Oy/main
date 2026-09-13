@@ -3,254 +3,540 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FEONA — Data Analytics Platform & AI Solutions</title>
+    <title>FEONA — Advanced Data Analytics & AI Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0f172a;
-            --secondary: #2563eb;
-            --accent: #06b6d4;
-            --bg-light: #f8fafc;
-            --text-dark: #334155;
-            --white: #ffffff;
+            --fdca-navy: #00204a;
+            --fdca-navy-light: #003366;
+            --fdca-blue: #0066cc;
+            --fdca-accent: #00a8cc;
+            --bg-light: #f4f6f9;
+            --bg-white: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
         }
-        header {
-            background: linear-gradient(135deg, var(--primary), #1e293b);
-            color: var(--white);
-            padding: 1.5rem 5%;
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Top Utility Bar --- */
+        .top-bar {
+            background: var(--fdca-navy);
+            color: #94a3b8;
+            padding: 0.4rem 6%;
+            font-size: 0.8rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .top-bar-info span {
+            margin-right: 1.5rem;
+        }
+
+        /* --- Main Header Navigation --- */
+        header {
+            background: var(--bg-white);
+            padding: 1.25rem 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-bottom: 3px solid var(--fdca-blue);
         }
-        header .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            letter-spacing: 1.5px;
-            color: var(--accent);
-        }
-        nav a {
-            color: var(--white);
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--fdca-navy);
             text-decoration: none;
-            margin-left: 2rem;
-            font-weight: 500;
-            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
+
+        .logo span {
+            color: var(--fdca-blue);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--fdca-navy);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
         nav a:hover {
-            color: var(--accent);
+            color: var(--fdca-blue);
         }
+
+        /* --- Hero Banner --- */
         .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-            color: var(--white);
-            padding: 6rem 5%;
-            text-align: center;
+            background: linear-gradient(135deg, var(--fdca-navy) 0%, var(--fdca-navy-light) 100%);
+            color: #ffffff;
+            padding: 5.5rem 6%;
+            position: relative;
         }
-        .hero h1 {
-            font-size: 3rem;
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: var(--font-heading);
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+            color: #ffffff;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: var(--fdca-blue);
+            color: #ffffff;
+            padding: 0.85rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--fdca-accent);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .btn-outline:hover {
+            background: #ffffff;
+            color: var(--fdca-navy);
+        }
+
+        .hero-badge-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 2rem;
+            border-radius: 6px;
+        }
+
+        .hero-badge-box h4 {
+            font-family: var(--font-heading);
+            color: var(--fdca-accent);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
             margin-bottom: 1rem;
         }
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 800px;
-            margin: 0 auto 2rem auto;
-            color: #94a3b8;
+
+        .hero-badge-box ul {
+            list-style: none;
         }
-        .btn {
-            background-color: var(--secondary);
-            color: var(--white);
-            padding: 0.75rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
+
+        .hero-badge-box li {
+            color: #e2e8f0;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-badge-box li::before {
+            content: "✓";
+            color: var(--fdca-accent);
             font-weight: bold;
-            transition: background 0.3s;
-            display: inline-block;
         }
-        .btn:hover {
-            background-color: #1d4ed8;
-        }
+
+        /* --- Section Container Layout --- */
         section {
-            padding: 5rem 5%;
+            padding: 5rem 6%;
             max-width: 1200px;
             margin: 0 auto;
         }
+
+        .section-header {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
         h2 {
-            font-size: 2.25rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            text-align: center;
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--fdca-navy);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
+
         .section-subtitle {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 3rem auto;
-            color: #64748b;
-            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-top: 0.5rem;
         }
+
+        /* --- Grid & Cards --- */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
+
         .card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--secondary);
-            transition: transform 0.3s;
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 2.25rem;
+            transition: box-shadow 0.25s ease, border-color 0.25s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
         }
+
         .card:hover {
-            transform: translateY(-5px);
+            border-color: var(--fdca-blue);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
+
+        .card-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--fdca-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+
         .card h3 {
-            margin-top: 0;
-            color: var(--primary);
-            font-size: 1.5rem;
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--fdca-navy);
+            margin-bottom: 0.85rem;
         }
-        .research-section {
-            background: #e2e8f0;
-            border-radius: 12px;
+
+        .card p {
+            color: var(--text-main);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* --- Doctoral Research Box --- */
+        .research-container {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-left: 6px solid var(--fdca-navy);
+            border-radius: 6px;
             padding: 3.5rem;
-            margin-top: 2rem;
-            border-left: 6px solid var(--secondary);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
-        .research-section h2 {
-            text-align: left;
+
+        .research-container h2 {
+            margin-bottom: 1rem;
         }
+
+        .research-container p {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .research-container p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* --- Contact Section --- */
         .contact-box {
-            background: var(--white);
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
             padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             max-width: 700px;
             margin: 0 auto;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
-        .contact-info {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+
         .form-group {
             margin-bottom: 1.25rem;
-            text-align: left;
         }
+
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: var(--primary);
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--fdca-navy);
+            text-transform: uppercase;
         }
-        .form-group input, .form-group textarea {
+
+        .form-group input, 
+        .form-group textarea {
             width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #cbd5e1;
-            border-radius: 5px;
-            box-sizing: border-box;
+            padding: 0.75rem 1rem;
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-main);
             font-family: inherit;
-        }
-        footer {
-            background: var(--primary);
-            color: var(--white);
-            padding: 3rem 5%;
-            margin-top: 4rem;
             font-size: 0.95rem;
-            color: #94a3b8;
         }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--fdca-blue);
+            background: var(--bg-white);
+        }
+
+        /* --- Corporate Footer --- */
+        footer {
+            background: var(--fdca-navy);
+            color: #ffffff;
+            padding: 4rem 6% 2rem 6%;
+            margin-top: 4rem;
+        }
+
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 3rem;
             margin-bottom: 2rem;
         }
-        .footer-info p {
-            margin: 0.3rem 0;
+
+        .footer-col h4 {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--fdca-accent);
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-col p {
             color: #cbd5e1;
-        }
-        .footer-info a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        .footer-info a:hover {
-            text-decoration: underline;
-        }
-        .footer-bottom {
-            text-align: center;
             font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--fdca-accent);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                display: none;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 5%;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 3.5rem 5%;
+            }
+
+            .research-container, .contact-box {
+                padding: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="top-bar-info">
+            <span>📍 Helsinki, Finland</span>
+            <span>✉️ info@feona.fi</span>
+        </div>
+        <div>
+            <span>FEONA Oy</span>
+        </div>
+    </div>
+
     <!-- Header & Navigation -->
     <header>
-        <div class="logo">FEONA</div>
+        <a href="#" class="logo">FEONA <span>OY</span></a>
         <nav>
             <a href="#platform">Platform</a>
             <a href="#solutions">AI Solutions</a>
             <a href="#research">Research</a>
             <a href="#services">Services</a>
-            <a href="#contact">Contact & Partnership</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <div class="hero">
-        <h1>FEONA: Advanced Data Analytics & AI Solutions</h1>
-        <p>Bridging modern cloud data architecture with behavioral machine learning rooted in doctoral research.</p>
-        <a href="#contact" class="btn">Explore Partnership</a>
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>FEONA: Advanced Data Analytics & AI Solutions</h1>
+                <p>Bridging modern cloud data architecture with behavioral machine learning rooted in Finnish doctoral research.</p>
+                <div class="btn-group">
+                    <a href="#contact" class="btn">Get Started</a>
+                    <a href="#platform" class="btn btn-outline">Platform Capabilities</a>
+                </div>
+            </div>
+            <div class="hero-badge-box">
+                <h4>Core Focus Areas</h4>
+                <ul>
+                    <li>Modern Cloud Warehouses (Snowflake / Azure)</li>
+                    <li>FINTECH & Regulatory Compliance Workflows</li>
+                    <li>Behavioral ML Telemetry Extraction</li>
+                    <li>Executive Dashboards & KPI Frameworks</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <!-- Platform Overview -->
+    <!-- Platform Overview Section -->
     <section id="platform">
-        <h2>The FEONA Data Analytics Platform</h2>
-        <p class="section-subtitle">Delivering robust data analytics, data warehousing, and knowledge management consulting for Finnish SMEs, fintech operators, and the public sector.</p>
+        <div class="section-header">
+            <h2>FEONA Data Analytics Platform</h2>
+            <p class="section-subtitle">Delivering robust data analytics, data warehousing, and knowledge management consulting for Finnish SMEs, fintech operators, and enterprise teams.</p>
+        </div>
         
         <div class="grid">
             <div class="card">
+                <div class="card-tag">Infrastructure</div>
                 <h3>Cloud Data Warehouses</h3>
                 <p>Architecting, executing, and maintaining modern, scalable data foundations built on <strong>Snowflake</strong> and <strong>Microsoft Azure</strong> to replace siloed legacy spreadsheets.</p>
             </div>
             <div class="card">
+                <div class="card-tag">Integration</div>
                 <h3>ETL & ELT Pipelines</h3>
                 <p>Robust data ingestion pipelines and automated processing frameworks ensuring seamless data flows across complex organizational environments.</p>
             </div>
             <div class="card">
+                <div class="card-tag">Business Intelligence</div>
                 <h3>Power BI & Semantic Models</h3>
                 <p>Advanced reporting, DAX logic, and dynamic executive dashboards providing real-time visibility into mission-critical business KPIs.</p>
             </div>
         </div>
     </section>
 
-    <!-- AI Solutions -->
+    <!-- AI Solutions Section -->
     <section id="solutions">
-        <h2>Cutting-Edge AI Solutions</h2>
-        <p class="section-subtitle">Translating rigorous academic research into production-ready software solutions for intelligent enterprise automation and behavioral mapping.</p>
+        <div class="section-header">
+            <h2>Cutting-Edge AI Solutions</h2>
+            <p class="section-subtitle">Translating academic research into production-ready software solutions for enterprise automation and behavioral mapping.</p>
+        </div>
         
         <div class="grid">
             <div class="card">
+                <div class="card-tag">Fintech</div>
                 <h3>Fintech & Regulatory Analytics</h3>
                 <p>Automated financial reporting, precise reconciliations, and regulatory compliance workflows (AML, IFRS) combining deep accounting insight with modern cloud tech.</p>
             </div>
             <div class="card">
+                <div class="card-tag">Machine Learning</div>
                 <h3>Behavioral Machine Learning</h3>
-                <p>Advanced feature extraction and modeling ($X = \{\text{Logic, Spatial, Resilience, Efficiency, Collaboration}\}$) translating observational telemetry into structured insights.</p>
+                <p>Advanced feature extraction and modeling translating observational telemetry into structured insights across complex cognitive domains.</p>
             </div>
             <div class="card">
+                <div class="card-tag">Predictive Analytics</div>
                 <h3>Predictive Career Pathways</h3>
                 <p>Supervised multi-label classification and clustering algorithms mapping longitudinal behavioral progression to professional aptitude models.</p>
             </div>
@@ -259,42 +545,47 @@
 
     <!-- Doctoral Research Section -->
     <section id="research">
-        <div class="research-section">
+        <div class="research-container">
             <h2>Grounded in Doctoral Research</h2>
             <p>FEONA develops software and analytics for organisations that need to know what is actually happening, not what gets reported. Our work is grounded in research on modelling real systems from observation, whether that system is a machine, a network or a learner.</p>
-            <!-- <p>Each project applies it to a different domain; the method is common to all of them.</p> -->
             <p>By capturing stealth behavioral metrics, FEONA quantifies unmeasured cognitive growth to build objective, data-driven competency profiles.</p>
         </div>
     </section>
 
-    <!-- Services & Offerings -->
+    <!-- Core Services Section -->
     <section id="services">
-        <h2>Core Services & Expertise</h2>
-        <p class="section-subtitle">Flexible engagement models designed for enterprise growth, public sector tenders, and Nordic tech partnerships.</p>
+        <div class="section-header">
+            <h2>Core Services & Expertise</h2>
+            <p class="section-subtitle">Flexible engagement models designed for enterprise growth, public sector tenders, and corporate tech implementations.</p>
+        </div>
         
         <div class="grid">
             <div class="card">
+                <div class="card-tag">Modernization</div>
                 <h3>Enterprise Modernization</h3>
                 <p>Migration from legacy systems to cloud-native platforms with fast delivery cycles—first functional reporting model operational within 2–4 weeks.</p>
             </div>
             <div class="card">
+                <div class="card-tag">Management</div>
                 <h3>Executive Dashboards & KPI Logic</h3>
                 <p>Eliminate manual reporting overhead and empower management with standardized financial and operational views.</p>
             </div>
             <div class="card">
+                <div class="card-tag">Advisory</div>
                 <h3>Independent Architectural Advisory</h3>
                 <p>Independent consulting on platform selection (Snowflake vs. Synapse vs. Databricks) and strategic data roadmap development.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Partnership Section -->
+    <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact & Explore Partnership</h2>
-        <p class="section-subtitle">Connect with us to discuss data architecture, analytics consulting, or explore strategic partnerships.</p>
+        <div class="section-header" style="text-align: center;">
+            <h2>Contact Us</h2>
+            <p class="section-subtitle">Connect with our team to discuss data architecture, AI solutions, or custom analytics deployments.</p>
+        </div>
         
         <div class="contact-box">
-
             <form id="contact-form" action="https://formspree.io/f/xwleoqdd" method="POST">
                 <div class="form-group">
                     <label for="name">Your Name / Organization</label>
@@ -305,16 +596,16 @@
                     <input type="email" id="email" name="email" required placeholder="name@example.com">
                 </div>
                 <div class="form-group">
-                    <label for="message">Partnership Interest / Message</label>
-                    <textarea id="message" name="message" rows="4" required placeholder="Describe your project, data architecture needs, or collaboration idea..."></textarea>
+                    <label for="message">Project Overview / Message</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Describe your project, data architecture needs, or analytics requirements..."></textarea>
                 </div>
-                <button type="submit" id="my-form-button" class="btn" style="width: 100%; border: none; cursor: pointer;">Submit Partnership Inquiry</button>
-                <p id="form-status" style="margin-top: 1rem; text-align: center; font-weight: bold; color: var(--secondary);"></p>
+                <button type="submit" class="btn" style="width: 100%;">Submit Inquiry</button>
+                <p id="form-status" style="margin-top: 1rem; text-align: center; font-weight: bold; color: var(--fdca-blue);"></p>
             </form>
         </div>
     </section>
 
-    <!-- Script to handle Formspree AJAX submission -->
+    <!-- Formspree AJAX Script -->
     <script>
         var form = document.getElementById("contact-form");
         
@@ -331,10 +622,12 @@
                 }
             }).then(response => {
                 if (response.ok) {
-                    status.innerHTML = "Thank you for your partnership inquiry! We will be back soon.";
+                    status.style.color = "var(--fdca-blue)";
+                    status.innerHTML = "Thank you for contacting us! We will be in touch shortly.";
                     form.reset();
                 } else {
                     response.json().then(data => {
+                        status.style.color = "#dc2626";
                         if (Object.hasOwn(data, 'errors')) {
                             status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
                         } else {
@@ -343,6 +636,7 @@
                     })
                 }
             }).catch(error => {
+                status.style.color = "#dc2626";
                 status.innerHTML = "Oops! There was a problem submitting your form.";
             });
         }
@@ -350,23 +644,27 @@
         form.addEventListener("submit", handleSubmit);
     </script>
 
-    <!-- Footer with Contact Info & LinkedIn -->
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-info">
-                <p><strong>FEONA Oy</strong></p>
-                <p>Kansakoulukatu 3, 00100 Helsinki</p>
+            <div class="footer-col">
+                <h4>FEONA Oy</h4>
+                <p>Kansakoulukatu 3</p>
+                <p>00100 Helsinki, Finland</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Details</h4>
                 <p>Phone: +358 453 123 388</p>
                 <p>Email: <a href="mailto:info@feona.fi">info@feona.fi</a></p>
             </div>
-            <div class="footer-info">
-                <p><strong>Connect Online</strong></p>
+            <div class="footer-col">
+                <h4>Connect</h4>
                 <p>
                     <a href="https://www.linkedin.com/company/feona26" target="_blank" style="display: inline-flex; align-items: center; gap: 0.4rem;">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                         </svg>
-                        https://www.linkedin.com/company/feona26
+                        LinkedIn Company Page
                     </a>
                 </p>
             </div>
